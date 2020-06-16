@@ -1,0 +1,10 @@
+
+exports_files(["tsconfig.json"], visibility = ["//visibility:public"])
+
+load("@build_bazel_rules_nodejs//:index.bzl", "nodejs_binary")
+
+nodejs_binary(
+   name = "testws",
+   entry_point = "//b:src/index.ts",
+   data = [ "//b:testwsB" ]
+)
