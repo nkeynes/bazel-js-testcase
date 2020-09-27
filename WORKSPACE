@@ -6,8 +6,8 @@ workspace (
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 http_archive(
     name = "build_bazel_rules_nodejs",
-    sha256 = "f9e7b9f42ae202cc2d2ce6d698ccb49a9f7f7ea572a78fd451696d03ef2ee116",
-    urls = ["https://github.com/bazelbuild/rules_nodejs/releases/download/1.6.0/rules_nodejs-1.6.0.tar.gz"],
+    sha256 = "4952ef879704ab4ad6729a29007e7094aef213ea79e9f2e94cbe1c9a753e63ef",
+    urls = ["https://github.com/bazelbuild/rules_nodejs/releases/download/2.2.0/rules_nodejs-2.2.0.tar.gz"],
 )
 
 load("@build_bazel_rules_nodejs//:index.bzl", "node_repositories")
@@ -30,10 +30,3 @@ yarn_install(
     yarn_lock = "//:yarn.lock",
 )
 
-# Install all bazel dependencies of the @npm npm packages
-load("@npm//:install_bazel_dependencies.bzl", "install_bazel_dependencies")
-install_bazel_dependencies()
-
-# Set up TypeScript toolchain
-load("@npm_bazel_typescript//:index.bzl", "ts_setup_workspace")
-ts_setup_workspace()

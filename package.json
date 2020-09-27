@@ -6,7 +6,7 @@
   "devDependencies": {
     "@bazel/bazelisk": "^1.4.0",
     "@bazel/ibazel": "^0.13.1",
-    "@bazel/typescript": "^1.7.0",
+    "@bazel/typescript": "^2.2.0",
     "@types/node": "11.13.9",
     "typescript": "^3.8.2"
   }
